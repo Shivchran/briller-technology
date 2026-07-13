@@ -88,7 +88,7 @@ function Footer() {
 
       <div className="footer-bottom">
 
-        © 2026 Briller Technology. All Rights Reserved.
+        © 2026 Briller Technology. All Rights Reserved. 
 
       </div>
 
