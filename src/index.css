@@ -2346,3 +2346,132 @@ body.light-theme .hp-cta-content p {
     width: 100%;
   }
 }
+/* =====================================================
+   FINAL MOBILE NAVBAR FIX
+===================================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Prevent horizontal scrolling */
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Mobile Navbar */
+    .navbar {
+        position: fixed;
+        top: 10px;
+        left: 12px;
+        transform: none;
+
+        width: calc(100% - 24px);
+        max-width: none;
+
+        height: 70px;
+
+        padding: 0 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border-radius: 15px;
+    }
+
+    /* Mobile Logo */
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 65px;
+        object-fit: contain;
+    }
+
+    /* Right side */
+    .navbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+    }
+
+    /* Theme button */
+    .desktop-theme {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+        font-size: 17px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 26px;
+        height: 3px;
+        display: block;
+        border-radius: 5px;
+    }
+
+    /* Mobile menu */
+    .menu {
+        position: fixed;
+
+        top: 70px;
+        right: -280px;
+
+        width: 260px;
+        max-width: 80vw;
+
+        height: calc(100vh - 70px);
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        gap: 25px;
+
+        padding: 30px 25px;
+
+        transition: right 0.35s ease;
+
+        z-index: 999;
+    }
+
+    /* Open mobile menu */
+    .menu.active {
+        right: 0;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        display: block;
+        width: 100%;
+
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+}
